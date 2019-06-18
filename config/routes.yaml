@@ -1,3 +1,8 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+homepage:
+    path: /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect, route: easyadmin, permanent: true }
+
+backend:
+    resource: '../src/Controller/AdminController.php'
+    prefix: /admin
+    type: annotation
